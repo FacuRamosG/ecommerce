@@ -9,7 +9,6 @@ import {
   PrevButton,
   NextButton
 } from './EmblaCarouselArrowsDotsButtons'
-import Image from 'next/image'
 
 
 type PropType = {
@@ -71,7 +70,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 <div className="embla__slide__number">
                   <span>{index + 1}</span>
                 </div>
-                <Image
+                <img
                   className="h-[400px] md:w-full  object-contain"
                   src={imageByIndex[index].secure_url}
                   alt="Your alt text"
