@@ -1,4 +1,3 @@
-'use client'
 import Link from "next/link"
 import React from "react"
 type Results = {
@@ -21,10 +20,12 @@ type Results = {
 export const Articles = ({ results }: Results) => {
     return(
         <article className="grid grid-cols-[repeat(auto-fill,minmax(275px,1fr))] gap-5">
-                {results.map(result => (
+                {results.map(result =>{ 
+                    const src = `http://http2.mlstatic.com/D_${result.thumbnail_id}-O.jpg`
+                return(
                     <Link key={result.id} className="box-border flex flex-col items-center bg-white p-4 hover:scale-105 duration-300" href={`/items/${result.id}`} >
                         <picture className="w-full border-b p-1 ">
-                            <img src={`http://http2.mlstatic.com/D_${result.thumbnail_id}-O.jpg`} alt={result.title} className="w-[250px] h-[250px] m-auto object-contain" />
+                            <img src={src} alt={result.title} className="w-[250px] h-[250px] m-auto object-contain" />
                         </picture>
                         <div className="w-full flex flex-col justify-start text-gray-700">
                             <h4 className="">{result.title}</h4>
@@ -45,7 +46,7 @@ export const Articles = ({ results }: Results) => {
                             </strong>
                         </div>
                     </Link>
-                ))}
+                )})}
             </article>
     )
 }
