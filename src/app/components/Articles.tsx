@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 type Results = {
@@ -25,7 +26,7 @@ export const Articles = ({ results }: Results) => {
                 return(
                     <Link key={result.id} className="box-border flex flex-col items-center bg-white p-4 hover:scale-105 duration-300" href={`/items/${result.id}`} >
                         <picture className="w-full border-b p-1 ">
-                            <img src={src} alt={result.title} className="w-[250px] h-[250px] m-auto object-contain" />
+                            <Image src={src} alt={result.title} className="w-[250px] h-[250px] m-auto object-contain" />
                         </picture>
                         <div className="w-full flex flex-col justify-start text-gray-700">
                             <h4 className="">{result.title}</h4>
