@@ -1,6 +1,6 @@
 const api = {
     item: {
-        search: (id : string ) => fetch(`https://api.mercadolibre.com/items/${id}`)
+        search: (id: string ) => fetch(`https://api.mercadolibre.com/items/${id}`)
             .then(res => res.json() as Promise<{
                 id:string
                 title:string
