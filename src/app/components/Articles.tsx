@@ -17,7 +17,7 @@ type Results = {
     }[]
 }
 
-export const Articles: React.FC<Results> = ({ results }: Results) => {
+export const Articles = ({ results }: Results) => {
     return(
         <article className="grid grid-cols-[repeat(auto-fill,minmax(275px,1fr))] gap-5">
                 {results.map(result => (
