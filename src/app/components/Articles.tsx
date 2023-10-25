@@ -1,4 +1,5 @@
 import Link from "next/link"
+import React from "react"
 type Results = {
     results: {
         id:string
@@ -16,7 +17,7 @@ type Results = {
     }[]
 }
 
-export const Articles = ({ results }: Results) => {
+export const Articles: React.FC<Results> = ({ results }: Results) => {
     return(
         <article className="grid grid-cols-[repeat(auto-fill,minmax(275px,1fr))] gap-5">
                 {results.map(result => (

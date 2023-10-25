@@ -1,6 +1,6 @@
 const api = {
     item: {
-        search: (query: string) => fetch(`https://api.mercadolibre.com/items/${query}`)
+        search: (id : string ) => fetch(`https://api.mercadolibre.com/items/${id}`)
             .then(res => res.json() as Promise<{
                 id:string
                 title:string
@@ -24,12 +24,12 @@ const api = {
                     id: string
                 }[]
             }>),
-        description: (query: string) => fetch(`https://api.mercadolibre.com/items/${query}/description`)
+        description: (id: string) => fetch(`https://api.mercadolibre.com/items/${id}/description`)
                                     .then(res => res.json() as Promise<{
                                         plain_text: string
                                     }>)
     },
-    seller:(query:number) => fetch(`https://api.mercadolibre.com/users/${query}`)
+    seller:(id:number) => fetch(`https://api.mercadolibre.com/users/${id}`)
                                 .then(res => res.json() as Promise<{
                                     nickname:string
                                     permalink:string
@@ -40,19 +40,19 @@ const api = {
                                     }
     }>),
     category: {
-        category: (query:string) => fetch(`https://api.mercadolibre.com/categories/${query}`)
+        category: (id:string) => fetch(`https://api.mercadolibre.com/categories/${id}`)
                                                         .then(res => res.json() as Promise<{
                                                             path_from_root:{
                                                                 id:string
                                                                 name:string
                                                             }[]
                                                 }>),
-        search: (query:string) => fetch(`https://api.mercadolibre.com/sites/MLA/search?category=${query}&limit=20`)
+        search: (id:string) => fetch(`https://api.mercadolibre.com/sites/MLA/search?category=${id}&limit=20`)
                                     .then(res => res.json() as Promise<{
                                         results: {
                                             id:string
                                             title:string
-                                            thumbnail:string
+                                            thumbnail_id:string
                                             price: number
                                             original_price: number
                                             currency_id: string
