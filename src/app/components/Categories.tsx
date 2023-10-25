@@ -8,7 +8,7 @@ type Categories = {
 
 export const Categories = ({path_from_root}: Categories ) => {
     return(
-        <div className="mb-4">
+        <div className="mb-4 mt-16 ">
         {path_from_root.map((cate, index) =>  {
                 
                 return(

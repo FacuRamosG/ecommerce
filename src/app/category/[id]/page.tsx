@@ -16,6 +16,7 @@ export default async function ItemsPage ({params: {id}}: {params:{id:string}}) {
     return(
         <>  
             <Categories path_from_root={category.path_from_root} />
+            <div className='-mb-10'></div>
             <Articles results={results} />
         </>    
     )

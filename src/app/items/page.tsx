@@ -10,7 +10,7 @@ export default async function ItemsPage ({searchParams}: {searchParams:{search:s
     return(
         <>  
             <Categories path_from_root={category.path_from_root} />
-
+            <div className='-mb-10'></div>
             <Articles results={results} />
         </>    
     )
