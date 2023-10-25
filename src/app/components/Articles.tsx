@@ -20,7 +20,7 @@ type Results = {
 
 export const Articles = ({ results }: Results) => {
     return(
-        <article className="grid grid-cols-[repeat(auto-fill,minmax(275px,1fr))] gap-5">
+        <article className="grid grid-cols-[repeat(auto-fill,minmax(275px,1fr))] gap-5 mt-16">
                 {results.map(result =>{ 
                     const src = `https://http2.mlstatic.com/D_${result.thumbnail_id}-O.jpg`
                 return(

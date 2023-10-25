@@ -14,7 +14,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <body className='' >
-        <header className='bg-[#44444d] h-14 flex justify-center items-center'>
+        <header className='bg-[#44444d] h-14 flex justify-center items-center fixed w-full z-20'>
           
           <form action="/items" className='flex md::max-w-screen-xl m-auto'>
             <a href="/" className='text-3xl text-center mr-1 sm:mr-10 -mt-1' >MM</a>
@@ -28,7 +28,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             </button>
           </form>
         </header>
-        <main className='p-6 max-w-screen-xl mx-auto '>
+        <main className='p-6 max-w-screen-xl mx-auto'>
           {children}
         </main>
       </body>
