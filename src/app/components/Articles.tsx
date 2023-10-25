@@ -26,7 +26,7 @@ export const Articles = ({ results }: Results) => {
                 return(
                     <Link key={result.id} className="box-border flex flex-col items-center bg-white p-4 hover:scale-105 duration-300" href={`/items/${result.id}`} >
                         <picture className="w-full border-b p-1 ">
-                            <Image src={src} alt={result.title} className="w-[250px] h-[250px] m-auto object-contain" />
+                            <img src={src} alt={result.title} className="w-[250px] h-[250px] m-auto object-contain" width='250' height='250' />
                         </picture>
                         <div className="w-full flex flex-col justify-start text-gray-700">
                             <h4 className="">{result.title}</h4>
