@@ -7,13 +7,13 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Practica Ecommerce',
   description: 'Generated NextJS',
-  viewport: 'width=device-width, initial-scale=1',
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
     <html lang="en">
+      <meta itemProp='image' content='https://ecomer-gold.vercel.app/151shots_so.png'/>
       <body className='' >
         <header className='bg-[#44444d] h-14 flex justify-center items-center fixed w-full z-20'>
           
