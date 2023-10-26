@@ -5,7 +5,8 @@ const api = {
                 id:string
                 title:string
                 thumbnail:string
-                price: number                
+                price: number 
+                original_price: number               
                 currency_id: string
                 permalink: string
                 warranty:string
