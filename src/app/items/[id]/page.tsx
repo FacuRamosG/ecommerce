@@ -31,11 +31,11 @@ export default async function ItemsPage ({params: {id}}: {params:{id:string}}) {
                         <div className=" text-gray-700 flex flex-col justify-between border p-7 rounded-2xl md:max-w-[400px]">
                             <div className="flex flex-col gap-6">
                                 <h4 className="font-bold text-xl ">{item.title}</h4>
-                                <h4 className="text-xs line-through">{item.original_price?.toLocaleString("es-AR", {
+                                <h4 className="text-base -mb-2 line-through">{item.original_price?.toLocaleString("es-AR", {
                                     currency: item.currency_id,
                                     style: "currency"
                                 })}</h4>
-                                <strong className="text-4xl">
+                                <strong className="text-4xl font-normal">
                                     
                                     {item.price.toLocaleString("es-AR", {
                                         currency: item.currency_id,
