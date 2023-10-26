@@ -14,7 +14,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <head>
-        <meta name="twitter:image" content='https://ecomer-gold.vercel.app/151shots_so.png'/>
+        <meta property='og:image' content='https://ecomer-gold.vercel.app/151shots_so.png'/>
       </head>
       <body className='' >
         <header className='bg-[#44444d] h-14 flex justify-center items-center fixed w-full z-20'>
