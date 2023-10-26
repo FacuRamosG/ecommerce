@@ -42,7 +42,7 @@ export default async function ItemsPage ({params: {id}}: {params:{id:string}}) {
                                         style: "currency"
                                     })}
                                     {item.original_price 
-                                    ? <span className="text-xs text-green-700 ml-2">
+                                    ? <span className="text-base text-[#15AD5E] ml-2">
                                         {((item.original_price - item.price) / item.original_price * 100).toFixed(0)}% OFF
                                       </span> 
                                     : ""}

@@ -40,7 +40,7 @@ export const Articles = ({ results }: Results) => {
                                     style: "currency"
                                 })}
                                 {result.original_price 
-                                    ? <span className="text-xs text-green-700 ml-2">
+                                    ? <span className="text-xs text-[#15AD5E] ml-2">
                                         {((result.original_price - result.price) / result.original_price * 100).toFixed(0)}% OFF
                                       </span> 
                                     : ""}
